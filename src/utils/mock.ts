@@ -14,5 +14,6 @@ export function generateHorseList(): Horse[] {
       min: 1,
       max: 100
     }),
+    move: 0
   }));
 }

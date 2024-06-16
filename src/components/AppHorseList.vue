@@ -2,7 +2,7 @@
 import { computed, onMounted } from 'vue';
 import { useStore } from '@/store';
 import AppHorseListInfo from '@/components/AppHorseListInfo.vue';
-import { HorseRaceMutation } from '@/store/horseRace';
+import { HorseRaceMutation } from '@/types';
 
 const store = useStore();
 
