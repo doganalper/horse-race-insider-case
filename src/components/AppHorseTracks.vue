@@ -35,7 +35,7 @@ watch(
 </script>
 
 <template>
-  <div class="col-span-6 xl:col-span-3" v-if="currentRunHorses.length > 0">
+  <div class="col-span-6 xl:col-span-3 sticky top-5" v-if="currentRunHorses.length > 0">
     <AppHorseTrack
       v-for="(horse, index) in currentRunHorses"
       :key="index"

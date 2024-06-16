@@ -4,8 +4,16 @@ import { faker } from '@faker-js/faker';
 const HORSE_LIST_LENGTH = 20
 
 export function generateHorseList(): Horse[] {
-  return Array.from({ length: HORSE_LIST_LENGTH }, () => ({
-    color: faker.color.rgb(),
+  const colorsSet = new Set<string>();
+
+  while (colorsSet.size < HORSE_LIST_LENGTH) {
+    colorsSet.add(faker.color.rgb())
+  }
+
+  const colorsArr = Array.from(colorsSet)
+
+  return Array.from({ length: HORSE_LIST_LENGTH }, (_, idx) => ({
+    color: colorsArr[idx],
     id: faker.string.alphanumeric({
       length: 20,
     }),
