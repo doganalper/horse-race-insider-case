@@ -65,7 +65,7 @@ export const horseRaceStore = {
         )
       }
 
-      let interval: NodeJS.Timeout | undefined
+      let interval: ReturnType<typeof setInterval> | undefined
       interval = setInterval(() => {
         if (hasEveryHorseReachedFinish()) {
           clearInterval(interval)
