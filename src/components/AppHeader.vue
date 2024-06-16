@@ -14,11 +14,13 @@ const isRaceStarted = computed(() => store.state.race.raceStarted)
     <span class="font-semibold">Racing App</span>
     <div class="flex gap-4">
       <AppButton
+        data-testid="generate-program-button"
         text="Generate Program"
         @click="store.commit(HorseRaceMutation.GENERATE_PROGRAM)"
         :disabled="isRaceStarted"
       />
       <AppButton
+        data-testid="start-race-button"
         text="Start Race"
         @click="store.commit(HorseRaceMutation.MOVE_HORSES)"
         :disabled="isRaceStarted"

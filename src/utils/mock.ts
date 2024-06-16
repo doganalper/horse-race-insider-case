@@ -1,7 +1,7 @@
 import type { Horse } from '@/types';
 import { faker } from '@faker-js/faker';
 
-const HORSE_LIST_LENGTH = 20
+export const HORSE_LIST_LENGTH = 20
 
 export function generateHorseList(): Horse[] {
   const colorsSet = new Set<string>();

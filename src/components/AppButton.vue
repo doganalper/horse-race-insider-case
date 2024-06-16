@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-interface ButtonProps {
+export interface AppButtonProps {
   text: string
   disabled?: boolean
 }
 
-defineProps<ButtonProps>()
+defineProps<AppButtonProps>()
 
 const emit = defineEmits<{
   (e: 'click'): void

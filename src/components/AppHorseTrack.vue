@@ -39,6 +39,7 @@ const calculatedHorsePlacement = computed(() => {
       <span class="-rotate-90">{{ order }}</span>
     </div>
     <HorseIcon
+      data-testid="horse-icon"
       :color="horse.color"
       class="self-center relative transition-all"
       :style="{ transform: `translateX(-${calculatedHorsePlacement}%)`, left: `${calculatedHorsePlacement}%` }"
